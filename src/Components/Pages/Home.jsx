@@ -1,9 +1,10 @@
-import { Page } from "../App/Layout/Layout"
+import HeroBanner from '../../Assets/Images/hero-banner.png';
 
 export const Home = () => {
     return(
-        <section>
-            
+        <section className='col-2'>
+            <div>insert side menu here</div>
+            <img src={HeroBanner} alt="hero-banner" />
         </section>
     )
 }
