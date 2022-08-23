@@ -10,13 +10,14 @@ export const Login = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="LoginForm">
-            <input type="text" placeholder="First name" {...register("First name", { required: true, maxLength: 80 })} />
-            <input type="text" placeholder="Last name" {...register("Last name", { required: true, maxLength: 100 })} />
-            <input type="text" placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
+            <h2>Login</h2>
+            <input type="text" placeholder="First Name" {...register("First name", { required: true, maxLength: 80 })} />
+            <input type="text" placeholder="Last Name" {...register("Last name", { required: true, maxLength: 100 })} />
+            <input type="text" placeholder="E-Mail" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
 
             <div className="col-2">
                 <input type="submit" value="Login" />
-                <input type="reset" value="Reset" />
+                {/* <input type="reset" value="Reset" /> */}
             </div>
         </form>
     )
