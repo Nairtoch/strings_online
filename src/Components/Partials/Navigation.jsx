@@ -6,7 +6,7 @@ export const Nav = () => {
             <ul>
                 <li>Forside</li>
                 <li>Salgs- og handelbetingelser</li>
-                <button><li><a href="#">Login</a></li></button>
+                <button title="Login"><li><a href="/Login">Login</a></li></button>
             </ul>
         </nav>
     )
