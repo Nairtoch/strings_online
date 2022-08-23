@@ -5,8 +5,8 @@ import { Login } from '../../Pages/Login';
 export const AppRouter = () => {
     return(
         <Routes>
-            <Route index element={<Home />}></Route>
-            <Route element={<Login />}></Route>
+            <Route index element={<Home />} />
+            <Route path="/Login" element={<Login />} />
         </Routes>
     )
 }

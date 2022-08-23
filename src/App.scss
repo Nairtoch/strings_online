@@ -12,6 +12,11 @@ body {
     img{
         width: 100%;
     }
+
+    input{
+        margin: 2vw;
+        padding: 3vw;
+    }
 }
 
 .Footer{
@@ -63,5 +68,17 @@ body {
                 margin: 0;
             }
         }
+    }
+}
+
+.LoginForm{
+    display: grid;
+    grid-template-rows: auto;
+    width: 50%;
+    height: 20vh;
+
+    input{
+        padding: 2vh 0;
+        margin: 2vh 0 ;
     }
 }
