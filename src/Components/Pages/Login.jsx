@@ -4,21 +4,38 @@ import { useForm } from "react-hook-form";
 let counter = 0;
 
 export const Login = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (d) => alert("You are now logged in!");
-    const [data, setData] = useState("");
+    // const [loginData, setLoginData] = useState("");
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="LoginForm">
             <h2>Login</h2>
-            <input type="text" placeholder="First Name" {...register("First name", { required: true, maxLength: 80 })} />
-            <input type="text" placeholder="Last Name" {...register("Last name", { required: true, maxLength: 100 })} />
-            <input type="text" placeholder="E-Mail" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
+            <p>Indtast brugernavn og adgangskode for at logge på</p>
+            <label className="col-1"> 
+                Brugernavn:
+                <input type="text" id="username" placeholder="Brugernavn" {...register("username", { required: true })} />
+                {errors.username && (
+                    <span>
+                        Indtast venligst dit brugernavn!
+                    </span>
+                )}
+            </label>
+            <label className="col-1">
+                Adgangskode:
+                <input type="password" id="password" placeholder="Adgangskode" {...register("password", { required: true })} />
+                {errors.password && (
+                    <span>
+                        Du skal udfylde din adgangskode!
+                    </span>
+                )}
+            </label>
 
             <div className="col-2">
-                <input type="submit" value="Login" />
-                {/* <input type="reset" value="Reset" /> */}
+                <button type="submit" value="Login" />
             </div>
         </form>
     )
 }
+
+// Learn Form Hooks properly

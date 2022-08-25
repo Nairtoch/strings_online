@@ -5,6 +5,11 @@ body {
     margin: 0 auto;
 }
 
+.col-1{
+    display: grid;
+    grid-template-columns: auto;
+}
+
 .col-2{
     display: grid;
     grid-template-columns: auto auto;
@@ -81,10 +86,37 @@ body {
 
     h2{
         color: white;
+        font-size: 2.5em;
+        font-weight: 300;
+        margin: 2vh 0 0 0;
+    }
+
+    p{
+        color: white;
+        font-weight: 600;
+    }
+
+    label{
+        color: white;
     }
 
     input{
         padding: 2vh 0;
         margin: 2vh 0 ;
+        width: 30%;
+        background-color: #0A1D1C;
+        border: solid 1px #1F5E5B;
+        border-radius: 0.5em;
+
+        :nth-child(3){
+            background-color: #00F9B6;
+        }
+    } 
+
+    button{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
     }
 }
