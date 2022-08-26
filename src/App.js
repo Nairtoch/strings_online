@@ -9,11 +9,11 @@ import { Nav } from './Components/Partials/Navigation';
 function App() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <Nav />
       <Home />
-      <Footer /> */}
       <Login />
+      {/* <Footer /> */}
     </>
   );
 }
